@@ -8,28 +8,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-	<div class="field">
-		<canvas id="canvas">
+	<canvas id="canvas"></canvas>
 
-		</canvas>
-		<div class="tools">
-			<button type="button" class="button">undo</button>
-			<button type="button" class="button">clear</button>
-			
+<button onclick="Restore()">Undo</button>
+<button onclick="Clear()">Clear</button>
 
-<!-- 			<div class="color-field" style="background: red;"> </div>
-			<div class="color-field" style="background: black;"></div>
-			<div class="color-field" style="background: blue;"></div>
-			<div class="color-field" style="background: green;"></div>
+<div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+<div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+<input type="color" oninput="stroke_color = this.value" placeholder="Colors">
 
-			<input type="color" classs="color-picker">
-			
-			<input type="range" class="pen-range" min="1" max="50"> -->
-		</div>
-	</div>
-
-
-
+<input type="range" min="1" max="100" oninput="stroke_width = this.value">
 </body>
 <script src="index.js" type="text/javascript" charset="utf-8" async defer></script>
 </html>

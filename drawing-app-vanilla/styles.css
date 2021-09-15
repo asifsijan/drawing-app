@@ -1,4 +1,4 @@
-body{
+/*body{
 	margin: 0px;
 	padding: 30px;
 	overflow: hidden;
@@ -21,4 +21,13 @@ canvas{
 	border-radius: 10%;
 	border: 2px solid white;
 	align-self: center;
+}*/
+#canvas {
+ border: 1px solid black; 
+}
+
+.stroke-color {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
