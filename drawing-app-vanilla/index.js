@@ -1,4 +1,5 @@
 let canvas = document.getElementById("canvas");
+let saveBtn = document.getElementById("save-btn");
 canvas.width = window.innerWidth - 60;
 canvas.height = window.innerHeight * 0.6;
 let context = canvas.getContext("2d");
@@ -66,6 +67,7 @@ canvas.addEventListener("mousedown", start, false);
 canvas.addEventListener("mousemove", draw, false);
 canvas.addEventListener("mouseup", stop, false);
 canvas.addEventListener("mouseout", stop, false);
+//saveBtn.addEventListener("click", Savef, false);
 
 function Restore() {
   if (start_index <= 0) {
@@ -85,4 +87,21 @@ function Clear() {
     context.fillRect(0, 0, canvas.width, canvas.height);
     restore_array = [];
     start_index = -1;
+}
+
+document.getElementById('btn-download').addEventListener("click", function(e) {
+    var canvass = document.getElementById('canvas');
+
+    var dataURL = canvass.toDataURL("image/jpeg", 1.0);
+
+    downloadImage(dataURL, 'my-canvas.jpeg');
+});
+
+// Save | Download image
+function downloadImage(data, filename = 'untitled.jpeg') {
+    var a = document.createElement('a');
+    a.href = data;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
 }
