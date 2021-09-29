@@ -5,23 +5,39 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="styles.css">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+<!-- 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+--></head>
 <body>
 	<canvas id="canvas"></canvas>
 
-<button onclick="Restore()">Undo</button>
-<button onclick="Clear()">Clear</button>
+	<button onclick="Restore()">Undo</button>
+	<button onclick="Clear()">Clear</button>
 
-<div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
-<div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
-<input type="color" oninput="stroke_color = this.value" placeholder="Colors">
+	<div onclick="change_color(this)" style="background:green" class="stroke-color"></div>
+	<div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+	<input type="color" oninput="stroke_color = this.value" placeholder="Colors">
 
-<input type="range" min="1" max="100" oninput="stroke_width = this.value">
+	<input type="range" min="1" max="100" oninput="stroke_width = this.value">
 
-<button type="" id="btn-download">
-	save
-</button>
+	<button type="" id="btn-download">
+		save
+	</button>
 </body>
 <script src="index.js" type="text/javascript" charset="utf-8" async defer></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </html>
