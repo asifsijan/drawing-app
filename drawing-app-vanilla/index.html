@@ -8,27 +8,95 @@
 	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
 
 
-<!-- 	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
---></head>
+
 <body>
+
+
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">		
+		</div>
+		<div class="col-md-4">	
+		</div>
+	</div>
+
+	<div class="header">
+		<h1>PAPER</h1>
+	</div>
+
 	<canvas id="canvas"></canvas>
 
-	<button onclick="Restore()">Undo</button>
-	<button onclick="Clear()">Clear</button>
+	<div class="container">
 
-	<div onclick="change_color(this)" style="background:green" class="stroke-color"></div>
-	<div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
-	<input type="color" oninput="stroke_color = this.value" placeholder="Colors">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="left">
+					
+					<button onclick="Restore()" class="btn btn-link">
+						<h1>
+							<i class="fas fa-arrow-left"></i>
+						</h1>
+					</button>
 
-	<input type="range" min="1" max="100" oninput="stroke_width = this.value">
+				</div>
+			</div>
+			<div class="col-md-4">		
 
-	<button type="" id="btn-download">
-		save
-	</button>
+				<div class="mid pt-1">
+
+					<button onclick="change_color(this)" style="background:green" class="stroke-color"></button>
+					<button onclick="change_color(this)" style="background:blue" class="stroke-color"></button>
+					<button onclick="change_color(this)" style="background:red" class="stroke-color"></button>
+					<button onclick="change_color(this)" style="background:black" class="stroke-color"></button>
+					<div class="pt-2">
+						
+						<input type="color" oninput="stroke_color = this.value" placeholder="Colors" >
+
+						<input type="range" min="1" max="3" oninput="stroke_width = this.value" class="range">
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-4">	
+				<div class="right">
+
+
+					<button type="button" onclick="Clear()" class="btn btn-link">
+						<h1>
+							<i class="fas fa-toilet"></i>
+						</h1>
+					</button>
+
+					<button type="" id="btn-download" class="btn btn-link">
+						<h1>
+							<i class="fas fa-download"></i>
+						</h1>
+
+
+					</button>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+	</div>
 </body>
+
+
+
+
 <script src="index.js" type="text/javascript" charset="utf-8" async defer></script>
 
 <!-- jQuery library -->

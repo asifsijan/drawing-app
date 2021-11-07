@@ -1,7 +1,7 @@
 let canvas = document.getElementById("canvas");
 let saveBtn = document.getElementById("save-btn");
-canvas.width = window.innerWidth - 60;
-canvas.height = window.innerHeight * 0.6;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight * 0.8;
 let context = canvas.getContext("2d");
 context.fillStyle = "white";
 context.fillRect(0, 0, canvas.width, canvas.height);
